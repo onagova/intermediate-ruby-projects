@@ -104,8 +104,15 @@ module Mastermind
       codemaker, codebreaker = get_codemaker_codebreaker
       puts ''
 
-      puts 'Codemaker must make a secret code.'
-      board = Board.new(codemaker.make_secret_code)
+      begin
+        puts 'Codemaker must make a secret code.'
+        board = Board.new(codemaker.make_secret_code)
+      rescue CustomError => e
+        puts e
+        puts 'Try again...'
+        puts ''
+        retry
+      end
       codemaker.board = board
       codebreaker.board = board
       puts ''
