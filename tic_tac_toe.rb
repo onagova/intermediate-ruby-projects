@@ -149,5 +149,3 @@ module TicTacToe
     end
   end
 end
-
-TicTacToe::GameManager.new.play

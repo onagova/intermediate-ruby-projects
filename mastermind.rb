@@ -252,5 +252,3 @@ module Mastermind
     end
   end
 end
-
-Mastermind::GameManager.new.play
