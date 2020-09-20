@@ -1,5 +1,5 @@
-require './tic_tac_toe.rb'
-require './mastermind.rb'
+require './lib/tic_tac_toe.rb'
+require './lib/mastermind.rb'
 
 selection = nil
 
